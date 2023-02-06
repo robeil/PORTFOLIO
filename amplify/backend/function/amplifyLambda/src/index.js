@@ -5,8 +5,13 @@ exports.handler = async (event, context) => {
     let body;
     let statusCode = 200;
     const headers = {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,POST,GET,HEAD,DELETE,PUT"
     };
+
+    
     const tableName = process.env.TABLE;
     try {
         if (event.httpMethod === "POST") {
