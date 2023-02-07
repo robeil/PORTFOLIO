@@ -3,6 +3,18 @@ import Modal from "react-modal";
 import cancelImg from "../../assets/img/cancel.svg";
 import UseData from "../../Hooks/UseData";
 import blogQuote from "../../assets/img/blog/quote.svg";
+import screenShoot1 from "../../assets/img/blog/screenshot-1.png";
+import screenShoot2 from "../../assets/img/blog/screenshot-2.png";
+import ampllify from "../../assets/img/blog/amplify.png";
+import apiGateway from "../../assets/img/blog/apiGateway.png";
+import cloudFormation from "../../assets/img/blog/cloudFormation.png";
+import cloudWatch from "../../assets/img/blog/cloudWatch.png";
+import sns from "../../assets/img/blog/sns.png";
+import cognito from "../../assets/img/blog/cognito.png";
+import daynamodb from "../../assets/img/blog/dnynamodb.png";
+import s3bucket from "../../assets/img/blog/s3-bucket.png";
+
+
 
 Modal.setAppElement("#root");
 
@@ -98,10 +110,30 @@ const Blog = () => {
                         </div>
                         <p>{singleData?.description2}</p>
                       </div>
+                      <p>initialize Amplify Backend</p>
+                      <img src={screenShoot1} alt="screenShoot" />
+                      <p>Adding Backend Api</p>
+                      <img src={screenShoot2} alt="screenShoot" />
                       <p>{singleData?.description3}</p>
                       <p>{singleData?.description4}</p>
                       <p>{singleData?.description5}</p>
                       <p>{singleData?.description6}</p>
+                      <p>S3 Bucket</p>
+                      <img src={s3bucket} alt="screenShoot" />
+                      <p>DynamoDB Table</p>
+                      <img src={daynamodb} alt="screenShoot" />
+                      <p>SNS Simple Notification Service</p>
+                      <img src={sns} alt="screenShoot" />
+                      <p>Cloud Formation</p>
+                      <img src={cloudFormation} alt="screenShoot" />
+                      <p>Cloud Watch</p>
+                      <img src={cloudWatch} alt="screenShoot" />
+                      <p>Api Gateway</p>
+                      <img src={apiGateway} alt="screenShoot" />
+                      <p>Cognito config</p>
+                      <img src={cognito} alt="screenShoot" />
+                      <p>Final Deployed</p>
+                      <img src={ampllify} alt="screenShoot" />
                     </div>
                     {/* Article Content Ends */}
                   </article>
