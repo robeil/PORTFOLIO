@@ -4,62 +4,12 @@ import { toast } from "react-toastify";
 import axios from 'axios';
 //import Toast from 'react-bootstrap/Toast';
 import "react-toastify/dist/ReactToastify.css";
+import  Amplify, { API } from "aws-amplify";
+
+
+
 
 function Contact() {
-
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [subject, setSubject] = useState("");
-  // const [message, setMessage] = useState("");
-
-  // let handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   let res = await fetch("https://6kyta3utpf.execute-api.us-east-1.amazonaws.com/v1/contact", {
-  //     method: "POST",
-  //     headers: {
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json',
-  //       "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
-  //       "Access-Control-Allow-Origin": "*",
-  //       "Access-Control-Allow-Methods": "OPTIONS,POST,GET,HEAD,DELETE,PUT"
-  //     },
-  //     body: JSON.stringify({
-  //       name: name,
-  //       email: email,
-  //       subject: subject,
-  //       message: message
-  //     })
-  //   })
-  //     res.then(function (error) {
-  //       toast.error("Ops Message Not Sent!", {
-  //         position: "top-right",
-  //         autoClose: 2000,
-  //         hideProgressBar: false,
-  //         closeOnClick: true,
-  //         pauseOnHover: true,
-  //         draggable: true,
-  //         progress: undefined,
-  //       });
-  //     })
-  //   toast.success("Message Sent Successfully!", {
-  //     position: "top-right",
-  //     autoClose: 2000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: true,
-  //     draggable: true,
-  //     progress: undefined,
-  //   })
-  //   setName("");
-  //   setSubject("");
-  //   setEmail("");
-  //   setMessage("");
-
-  //   document.getElementById("myForm").reset();
-  // };
-
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -93,7 +43,7 @@ function Contact() {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      fetch("https://6kyta3utpf.execute-api.us-east-1.amazonaws.com/v1/contact", {
+      fetch("https://m93cy1uq00.execute-api.us-east-1.amazonaws.com/dev/contact", {
         mode: 'no-cors',
         method: "POST",
         headers: {
@@ -106,6 +56,17 @@ function Contact() {
         //   "Access-Control-Allow-Origin": "*",
         //   "Access-Control-Allow-Methods": "OPTIONS,POST,GET,HEAD,DELETE,PUT"
         // },
+
+        /**
+         *  headers: {
+            "Content-Type" : "application/json",
+            "Access-Control-Allow-Headers" : "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+            "Access-Control-Allow-Methods" : "OPTIONS,POST",
+            "Access-Control-Allow-Credentials" : true,
+            "Access-Control-Allow-Origin" : "*",
+            "X-Requested-With" : "*"
+        }
+         */
         body: JSON.stringify({
           name: name,
           subject: subject,
@@ -114,9 +75,6 @@ function Contact() {
         })
 
       })
-        // console.log("sending message");
-
-        // let resJson = await res.json();
         .then((result) => {
           successResult();
           setName("");
