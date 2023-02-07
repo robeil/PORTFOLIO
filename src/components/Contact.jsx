@@ -1,89 +1,147 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import axios from 'axios';
+//import Toast from 'react-bootstrap/Toast';
 import "react-toastify/dist/ReactToastify.css";
-// import axios from 'axios';
-// import { useEffect } from "react";
 
-// const  myAPI = "amplifyAPI";
-// const path = "/contact";
+function Contact() {
 
-const Contact = () => {
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [subject, setSubject] = useState("");
+  // const [message, setMessage] = useState("");
 
-  // const [contactState, setContactState] = useState({
-  //   fullName: "",
-  //   subject: "",
-  //   email: "",
-  //   message: ""
-  // });
+  // let handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-  // const { fullName, email, subject, message } = contactState;
+  //   let res = await fetch("https://6kyta3utpf.execute-api.us-east-1.amazonaws.com/v1/contact", {
+  //     method: "POST",
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json',
+  //       "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+  //       "Access-Control-Allow-Origin": "*",
+  //       "Access-Control-Allow-Methods": "OPTIONS,POST,GET,HEAD,DELETE,PUT"
+  //     },
+  //     body: JSON.stringify({
+  //       name: name,
+  //       email: email,
+  //       subject: subject,
+  //       message: message
+  //     })
+  //   })
+  //     res.then(function (error) {
+  //       toast.error("Ops Message Not Sent!", {
+  //         position: "top-right",
+  //         autoClose: 2000,
+  //         hideProgressBar: false,
+  //         closeOnClick: true,
+  //         pauseOnHover: true,
+  //         draggable: true,
+  //         progress: undefined,
+  //       });
+  //     })
+  //   toast.success("Message Sent Successfully!", {
+  //     position: "top-right",
+  //     autoClose: 2000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //   })
+  //   setName("");
+  //   setSubject("");
+  //   setEmail("");
+  //   setMessage("");
 
-  // const onChangeField = (event) => {
-  //   const copyState = { ...contactState };
-  //   copyState[event.target.event] = event.target.value;
-  //   setContactState(copyState);
+  //   document.getElementById("myForm").reset();
   // };
 
-  // const sendEmail = async (event) => {
-  //   event.preventDefault();
-  //   await axios
-  //   //https://90vhi5wm9c.execute-api.us-east-1.amazonaws.com/dev/contact
-  //     .post("https://90vhi5wm9c.execute-api.us-east-1.amazonaws.com/dev/contact", contactState) //here hast be added the api gateway post url
-  //     .then(() => console.log('Contact send Successfully!'))
-  //   console.log(contactState);
 
-  // }
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
-  // useEffect(() => {
-  //   sendEmail()
-  // }, [])
+  const successResult = () => {
+    toast.success("Message Sent Successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    document.getElementById("myForm").reset();
+  }
 
-  const form = useRef();
+  const failedResult = () => {
+    toast.error("Ops Message Not Sent!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
 
-  const sendEmail = (e) => {
+  let handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_e1xn43q",
-        "template_j41242d",
-        form.current,
-        "LZ0LSfRnEbFgm9qEZ"
-      )
-      .then(
-        (result) => {
-          toast.success("Message Sent Successfully!", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          document.getElementById("myForm").reset();
+    try {
+      fetch("https://6kyta3utpf.execute-api.us-east-1.amazonaws.com/v1/contact", {
+        mode: 'no-cors',
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
         },
-        (error) => {
-          toast.error("Ops Message Not Sent!", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-        }
-      );
-  };
+        // headers: {
+        //   'Accept': 'application/json',
+        //   'Content-Type': 'application/json',
+        //   "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+        //   "Access-Control-Allow-Origin": "*",
+        //   "Access-Control-Allow-Methods": "OPTIONS,POST,GET,HEAD,DELETE,PUT"
+        // },
+        body: JSON.stringify({
+          name: name,
+          subject: subject,
+          email: email,
+          message: message
+        })
 
+      })
+        // console.log("sending message");
+
+        // let resJson = await res.json();
+        .then((result) => {
+          successResult();
+          setName("");
+          setSubject("");
+          setEmail("");
+          setMessage("");
+          console.log("message sent --------")
+        })
+    } catch (err) {
+      failedResult();
+      console.log(err);
+    }
+  }
   return (
     <>
-      <form id="myForm" className="contactform" ref={form} onSubmit={sendEmail}>
+      <form id="myForm" className="contactform" onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-12 col-md-6">
             <div className="form-group">
-              <input type="text" name="name" placeholder="YOUR NAME" required />
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="YOUR NAME" required />
             </div>
           </div>
           {/* End .col */}
@@ -92,9 +150,11 @@ const Contact = () => {
             <div className="form-group">
               <input
                 type="email"
+                value={email}
                 name="user_email"
                 placeholder="YOUR EMAIL"
                 required
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
@@ -104,9 +164,11 @@ const Contact = () => {
             <div className="form-group">
               <input
                 type="text"
+                value={subject}
                 name="subject"
                 placeholder="YOUR SUBJECT"
                 required
+                onChange={(e) => setSubject(e.target.value)}
               />
             </div>
           </div>
@@ -116,8 +178,10 @@ const Contact = () => {
             <div className="form-group">
               <textarea
                 name="message"
+                value={message}
                 placeholder="YOUR MESSAGE"
                 required
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
           </div>
@@ -131,9 +195,10 @@ const Contact = () => {
           </div>
           {/* End .col */}
         </div>
+
       </form>
     </>
   );
-};
 
+}
 export default Contact;
