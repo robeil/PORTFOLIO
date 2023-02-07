@@ -2,41 +2,41 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from 'axios';
-import { useEffect } from "react";
+// import axios from 'axios';
+// import { useEffect } from "react";
 
-const  myAPI = "amplifyAPI";
-const path = "/contact";
+// const  myAPI = "amplifyAPI";
+// const path = "/contact";
 
 const Contact = () => {
 
-  const [contactState, setContactState] = useState({
-    fullName: "",
-    subject: "",
-    email: "",
-    message: ""
-  });
+  // const [contactState, setContactState] = useState({
+  //   fullName: "",
+  //   subject: "",
+  //   email: "",
+  //   message: ""
+  // });
 
-  const { fullName, email, subject, message } = contactState;
+  // const { fullName, email, subject, message } = contactState;
 
-  const onChangeField = (event) => {
-    const copyState = { ...contactState };
-    copyState[event.target.event] = event.target.value;
-    setContactState(copyState);
-  };
+  // const onChangeField = (event) => {
+  //   const copyState = { ...contactState };
+  //   copyState[event.target.event] = event.target.value;
+  //   setContactState(copyState);
+  // };
 
-  const saveContact = async (event) => {
-    event.preventDefault();
-    await axios
-    //https://90vhi5wm9c.execute-api.us-east-1.amazonaws.com/dev/contact
-      .post("https://90vhi5wm9c.execute-api.us-east-1.amazonaws.com/dev/contact", contactState) //here hast be added the api gateway post url
-      .then(() => console.log('Contact send Successfully!'))
-    console.log(contactState);
+  // const sendEmail = async (event) => {
+  //   event.preventDefault();
+  //   await axios
+  //   //https://90vhi5wm9c.execute-api.us-east-1.amazonaws.com/dev/contact
+  //     .post("https://90vhi5wm9c.execute-api.us-east-1.amazonaws.com/dev/contact", contactState) //here hast be added the api gateway post url
+  //     .then(() => console.log('Contact send Successfully!'))
+  //   console.log(contactState);
 
-  }
+  // }
 
   // useEffect(() => {
-  //   saveContact()
+  //   sendEmail()
   // }, [])
 
   const form = useRef();
@@ -45,10 +45,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_n4mkhz9",
-        "template_ugoztxr",
+        "service_e1xn43q",
+        "template_j41242d",
         form.current,
-        "user_vYmDSd9PwIuRXUQEDjYwN"
+        "LZ0LSfRnEbFgm9qEZ"
       )
       .then(
         (result) => {
@@ -79,17 +79,11 @@ const Contact = () => {
 
   return (
     <>
-      <form id="myForm" className="contactform" ref={form} onSubmit={(event) => saveContact(event)}>
+      <form id="myForm" className="contactform" ref={form} onSubmit={sendEmail}>
         <div className="row">
           <div className="col-12 col-md-6">
             <div className="form-group">
-              <input
-                type="text"
-                name="fullName"
-                value={fullName}
-                onChange={(event) => onChangeField(event)}
-                placeholder="YOUR NAME"
-                required />
+              <input type="text" name="name" placeholder="YOUR NAME" required />
             </div>
           </div>
           {/* End .col */}
@@ -98,9 +92,7 @@ const Contact = () => {
             <div className="form-group">
               <input
                 type="email"
-                name="email"
-                value={email}
-                onChange={(event) => onChangeField(event)}
+                name="user_email"
                 placeholder="YOUR EMAIL"
                 required
               />
@@ -113,8 +105,6 @@ const Contact = () => {
               <input
                 type="text"
                 name="subject"
-                value={subject}
-                onChange={(event) => onChangeField(event)}
                 placeholder="YOUR SUBJECT"
                 required
               />
@@ -126,8 +116,6 @@ const Contact = () => {
             <div className="form-group">
               <textarea
                 name="message"
-                value={message}
-                onChange={(event) => onChangeField(event)}
                 placeholder="YOUR MESSAGE"
                 required
               ></textarea>
@@ -136,7 +124,7 @@ const Contact = () => {
           {/* End .col */}
 
           <div className="col-12">
-            <button type="submit" className="button" onClick={() => saveContact()}>
+            <button type="submit" className="button">
               <span className="button-text">Send Message</span>
               <span className="button-icon fa fa-send"></span>
             </button>
