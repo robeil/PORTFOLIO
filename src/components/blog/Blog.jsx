@@ -110,10 +110,9 @@ const Blog = () => {
                         </div>
                         <p>{singleData?.description2}</p>
                       </div>
-                      <p>initialize Amplify Backend</p>
+                      <p>Initialize Amplify Backend and Adding Backend Api & CloudFormation</p>
                       <img src={screenShoot1} alt="screenShoot" />
-                      <p>Adding Backend Api</p>
-                      <img src={screenShoot2} alt="screenShoot" />
+                      {/* <img src={screenShoot2} alt="screenShoot" /> */}
                       <p>{singleData?.description3}</p>
                       <p>{singleData?.description4}</p>
                       <p>{singleData?.description5}</p>
