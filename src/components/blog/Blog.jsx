@@ -4,7 +4,6 @@ import cancelImg from "../../assets/img/cancel.svg";
 import UseData from "../../Hooks/UseData";
 import blogQuote from "../../assets/img/blog/quote.svg";
 import screenShoot1 from "../../assets/img/blog/screenshot-1.png";
-import screenShoot2 from "../../assets/img/blog/screenshot-2.png";
 import ampllify from "../../assets/img/blog/amplify.png";
 import apiGateway from "../../assets/img/blog/apiGateway.png";
 import cloudFormation from "../../assets/img/blog/cloudFormation.png";
@@ -13,6 +12,7 @@ import sns from "../../assets/img/blog/sns.png";
 import cognito from "../../assets/img/blog/cognito.png";
 import daynamodb from "../../assets/img/blog/dnynamodb.png";
 import s3bucket from "../../assets/img/blog/s3-bucket.png";
+import lambda from "../../assets/img/blog/lambdFunction.png";
 
 
 
@@ -119,6 +119,8 @@ const Blog = () => {
                       <p>{singleData?.description6}</p>
                       <p>S3 Bucket</p>
                       <img src={s3bucket} alt="screenShoot" />
+                      <p>Lambda Function</p>
+                      <img src={lambda} alt="screenShoot" />
                       <p>DynamoDB Table</p>
                       <img src={daynamodb} alt="screenShoot" />
                       <p>SNS Simple Notification Service</p>

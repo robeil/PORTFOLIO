@@ -1,10 +1,6 @@
 import { useState } from "react";
 import img1 from "../assets/img/blog/blog-post-1.jpg";
-import img2 from "../assets/img/blog/blog-post-2.jpg";
-import img3 from "../assets/img/blog/blog-post-3.jpg";
-import img4 from "../assets/img/blog/blog-post-4.jpg";
-import img5 from "../assets/img/blog/blog-post-5.jpg";
-import img6 from "../assets/img/blog/blog-post-6.jpg";
+//import img2 from "../assets/img/blog/algotritm.jpg";
 
 const AllBlogData = () => {
   const blogsData = [
@@ -19,14 +15,13 @@ const AllBlogData = () => {
         "In this post, I'll show you how to build a full-stack react node.js application using Amplify, CloudFormation and CICD with GitHub. We'll go over each step of the process, from creating your CloudFormation templates to setting up your CICD pipeline. By the end, you'll have everything you need to deploy your own full-stack application on AWS. CloudFormation is a tool that allows you to provision and manage AWS resources, and CICD is a process that automates the software development lifecycle. Together, these two tools will help you build and deploy your application quickly and easily. So let's get started!",
       description2:
         ` - CloudFormation templates 
-- GitHub repository 
-- CICD pipeline 
-- Amplify
-`,
+          - GitHub repository 
+          - CICD pipeline 
+          - Amplify`,
       description3:
         "We'll start by looking at the CloudFormation templates. These templates define the infrastructure for our application. Next, we'll take a look at the GitHub repository. This is where our application code will live. Finally, we'll look at the CICD pipeline. This is how our application will be built and deployed.",
       description4:
-"GitHub is a web-based version-control and collaboration platform for software developers. It is a great platform for Amplify full-stack applications because it provides a central place for developers to track changes to their code, share code with other developers, and create a historical record of their work. In addition, GitHub makes it easy to set up a continuous integration and continuous deployment (CI/CD) pipeline for Amplify applications. In this article, we will show you how to set up a CI/CD pipeline for an Amplify full-stack application using GitHub. We will also provide a step-by-step guide on how to build and deploy an Amplify application using GitHub.",
+        "GitHub is a web-based version-control and collaboration platform for software developers. It is a great platform for Amplify full-stack applications because it provides a central place for developers to track changes to their code, share code with other developers, and create a historical record of their work. In addition, GitHub makes it easy to set up a continuous integration and continuous deployment (CI/CD) pipeline for Amplify applications. In this article, we will show you how to set up a CI/CD pipeline for an Amplify full-stack application using GitHub. We will also provide a step-by-step guide on how to build and deploy an Amplify application using GitHub.",
       description5:
         "Amplify is a toolchain for front-end and full-stack JavaScript applications. It is designed to make it easy to build and deploy applications with a robust set of features, including: - A build system for front-end and full-stack JavaScript applications - A CLI for creating and managing Amplify projects - A user interface for managing Amplify projects - A set of JS libraries for building Amplify applications Amplify is open source and available on GitHub. In this guide, I will show you how to use Amplify to build a full-stack React, Node.js application and how to set up Continuous Integration and Continuous Delivery (CI/CD) with GitHub.  ",
       description6:
@@ -41,8 +36,6 @@ const AllBlogData = () => {
         After that we have to initialize a new backend =>  amplify init
         After giving basic names for the resource 
         We have install the aws-Amplify library => npm install aws-amplify
-        
-        
         Then we have to import aws-apmlify in our frontend in the index.js 
         import { Amplify } from 'aws-amplify';
         import awsExports from './aws-exports';
@@ -55,7 +48,6 @@ const AllBlogData = () => {
         After choosing all the options we will receive a table to review 
         After giving basic names for the resource 
         We have install the aws-Amplify library => npm install aws-amplify
-        
         
         Then we have to import aws-apmlify in our frontend in the index.js 
         import { Amplify } from 'aws-amplify';
@@ -73,27 +65,25 @@ const AllBlogData = () => {
         
         Next is registering domain and request Amazon certificate.
         
-        And our full stack app should be up and running I AWS
+        And our full stack app should be up and running I AWS`,
+    }, 
+    /**{
+      id: 2,
+      img: img2,
+      title: "Top 10 Toolkits for Deep Learning in 2022",
+      commentor: "Santhan ",
+      date: "14 January 2022",
+      tag: `wordpress, business, economy, design`,
+       description1:
+       "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      description2:
+        "If you’ve been waiting for an invitation, this calligraphy is it. Commissioned by Notebook hand-lettered design for a poster. Quote is Notebook Building 8 VP’s Regina Dugan—and mine. ",
+      description3:
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      description4:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         
-`
-    },
-
-    // {
-    //   id: 2,
-    //   img: img2,
-    //   title: "Top 10 Toolkits for Deep Learning in 2022",
-    //   commentor: "Santhan ",
-    //   date: "14 January 2022",
-    //   tag: `wordpress, business, economy, design`,
-    //   description1:
-    //     "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    //   description2:
-    //     "If you’ve been waiting for an invitation, this calligraphy is it. Commissioned by Notebook hand-lettered design for a poster. Quote is Notebook Building 8 VP’s Regina Dugan—and mine. ",
-    //   description3:
-    //     "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-    //   description4:
-    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    // },
+    },*/
     // {
     //   id: 3,
     //   img: img3,

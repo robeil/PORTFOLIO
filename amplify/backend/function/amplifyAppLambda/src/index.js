@@ -24,10 +24,22 @@ exports.handler = async (event) => {
                 S: content.message
             }
         }
-    }; const params = {
-        TopicArn: 'arn:aws:sns:us-east-1:581178481532:portfolio-sns', Message: JSON.stringify(content) 
+    }; 
+    
+        
+    const messageToEmail = `
+    Hello {{content.name}},
+
+    You got a new message from {{content.name}},
+
+    {{content.message}}
+
+    Best wishes
+    `
+    const params = {
+        TopicArn: 'arn:aws:sns:us-east-1:581178481532:portfolio-sns', Message: JSON.stringify(messageToEmail) 
     };
-    await sns.publish(params).promise();
+    await sns.publish(messageToEmail).promise();
     await dynamodb.putItem(saveParams).promise();
     
     const response = { 
@@ -36,7 +48,7 @@ exports.handler = async (event) => {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Headers": "*"
         },
-        body: JSON.stringify(content),
+        body: JSON.stringify(messageToEmail),
      };
     return response;
 };
