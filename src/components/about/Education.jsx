@@ -22,6 +22,12 @@ const educationContent = [
     details: `Computer Science`,
     grade : `GPA :- 3.6`
   },
+  {
+  
+    degree: "AWS Cloud Computing Practitioner",
+    institute: "AWS",
+    details: `Certificate on Cloud Computing`
+  },
 ];
 
 const Education = () => {

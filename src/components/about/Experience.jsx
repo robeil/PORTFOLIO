@@ -2,9 +2,10 @@ import React from "react";
 
 const experienceContent = [
   {
-    year: "   2015 - 2019",
+    year: "   2017 - 2021",
     position: " Backend Developer",
-    companyName: "Liya Enterprise LLC",
+    companyName: "LWAM TECH",
+    location: "Arlington VA, USA",
     details: `• Collaborated with cross-functional IT teams and implemented proven technologies to develop numerous
     software products while insuring scalability, reusability, and reliability in Agile environment.
     • Participated in a software development team in charge of development, testing and maintenance of a
@@ -33,10 +34,13 @@ const Experience = () => {
             {val.position}
             <span className="place open-sans-font">{val.companyName}</span>
           </h5>
-          <p className="open-sans-font">{val.details}</p>
-          <h5 className="poppins-font">
-            {val.technologies}
+          <h5 className="poppins-font text-uppercase">
+            <span className="place open-sans-font">{val.location}</span>
           </h5>
+          <p className="open-sans-font">{val.details}</p>
+          <h6 className="place open-sans-font">
+            {val.technologies}
+          </h6>
         </li>
       ))}
     </ul>
