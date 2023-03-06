@@ -4,8 +4,8 @@ const experienceContent = [
   {
     year: "   2017 - 2021",
     position: " Backend Developer",
-    companyName: "LWAM TECH",
-    location: "Arlington VA, USA",
+    companyName: "LWAM TECH SOLUTIONS LLC",
+    location: "Alexandria VA, USA",
     details: `• Collaborated with cross-functional IT teams and implemented proven technologies to develop numerous
     software products while insuring scalability, reusability, and reliability in Agile environment.
     • Participated in a software development team in charge of development, testing and maintenance of a
