@@ -28,6 +28,12 @@ const educationContent = [
     institute: "AWS",
     details: `Certificate on Cloud Computing`
   },
+  {
+  
+    degree: "Agile/Scrum Master",
+    institute: "UDEMY",
+    details: `Certificate on Agile/Scrum Master`
+  },
 ];
 
 const Education = () => {
