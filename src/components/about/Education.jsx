@@ -6,14 +6,7 @@ const educationContent = [
     degree: "MASTER DEGREE",
     institute: "Maharishi International University",
     details: `Computer Science`,
-    grade : `GPA :- 3.8`
-  },
-  {
-    year: "2020",
-    degree: "Certificate",
-    institute: "Washington University",
-    details: `Full Stack Web Development`,
-    grade : `Grade :- A`
+    grade : `GPA :- 3.7`
   },
   {
     year: "2015",
@@ -21,6 +14,13 @@ const educationContent = [
     institute: "Eritrean Institute Technology",
     details: `Computer Science`,
     grade : `GPA :- 3.6`
+  },
+  {
+    year: "2020",
+    degree: "Certificate",
+    institute: "Washington University",
+    details: `Full Stack Web Development`,
+    grade : `Grade :- A`
   },
   {
   

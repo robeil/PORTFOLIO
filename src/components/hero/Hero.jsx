@@ -11,14 +11,16 @@ const heroContent = {
   heroMobileImage: heroImgMobile,
   heroTitleName: "Robeil Aregawi",
   heroDesignation: "Software Engineer",
-  heroDescriptions: `Talented Java Software Engineer with 4 years of Hands-on back-end experience, 
-  including latest experience in designing and improving microservices applications. Proven experience in optimizing 
-  code readability and improving team performance by implementing best practices and ensuring industry standards. 
-  Experienced in all stages of the software development lifecycle, with a valuable role in everything from requirements 
-  gathering to analysis, design, development, testing, and deployment. Expertise in the development of back-end components, 
-  as well as databases, algorithms, interfaces, APIs, and tools. Technological knowledge includes Java spring, spring boot and
-  MS SQL, MySQL, MongoDB as well as a variety of design patterns. Just completed my master’s degree education in Computer Science 
-  and awaiting my graduation ceremony this June 2023. Skilled in using technologies such as Java, TypeScript, GitHub, Spring, 
+  heroDescriptions: `Talented Java Software Engineer with 4+ years of Hands-on Java and React experience, 
+  including latest experience in designing and improving microservices applications. Proven experience in 
+  optimizing code readability and improving team performance by implementing best practices and ensuring 
+  industry standards. Experienced in all stages of the software development lifecycle, with a valuable role 
+  in everything from requirements gathering to analysis, design, development, testing, and deployment. 
+  Expertise in the development of back-end components and frontend react component, as well as databases, 
+  algorithms, interfaces, APIs, and tools. Technological knowledge includes Java spring, spring boot and 
+  MS SQL, MySQL, MongoDB, React, Responsive UI as well as a variety of design patterns. Completing my master’s 
+  degree education in Computer Science and awaiting my graduation ceremony this December 2023. Holder of 
+  AWS Cloud Computing Certification. Skilled in using technologies such as Java, React, GitHub, AWS, Spring, 
   Hibernate, Microservices using Agile Scrum through complete software development life cycle.`,
   heroBtn: "more about me",
 };
