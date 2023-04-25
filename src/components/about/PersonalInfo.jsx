@@ -5,8 +5,8 @@ const personalInfoContent = [
   { meta: "last name", metaInfo: "Aregawi" },
   { meta: "Address", metaInfo: "Seattle, WA" },
   { meta: "phone", metaInfo: "206-602-5164" },
-  { meta: "Email", metaInfo: "robeilaregawi1@mail.com" },
-  { meta: "language", metaInfo: "English, Tigrinya (Eritrean Language), basic German" },
+  { meta: "Email", metaInfo: "robeilfeb27@gmail.com" },
+  { meta: "language", metaInfo: "English, Tigrinya, basic German" },
 ];
 
 const PersonalInfo = () => {

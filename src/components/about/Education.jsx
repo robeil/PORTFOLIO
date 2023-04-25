@@ -9,7 +9,7 @@ const educationContent = [
     grade : `GPA :- 3.7`
   },
   {
-    year: "2015",
+    year: "2016",
     degree: "BACHELOR DEGREE ",
     institute: "Eritrean Institute Technology",
     details: `Computer Science`,
