@@ -1,13 +1,6 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-import axios from 'axios';
-//import Toast from 'react-bootstrap/Toast';
 import "react-toastify/dist/ReactToastify.css";
-import  Amplify, { API } from "aws-amplify";
-
-
-
 
 function Contact() {
   const [name, setName] = useState("");
@@ -49,24 +42,6 @@ function Contact() {
         headers: {
           "Content-Type": "application/json"
         },
-        // headers: {
-        //   'Accept': 'application/json',
-        //   'Content-Type': 'application/json',
-        //   "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
-        //   "Access-Control-Allow-Origin": "*",
-        //   "Access-Control-Allow-Methods": "OPTIONS,POST,GET,HEAD,DELETE,PUT"
-        // },
-
-        /**
-         *  headers: {
-            "Content-Type" : "application/json",
-            "Access-Control-Allow-Headers" : "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
-            "Access-Control-Allow-Methods" : "OPTIONS,POST",
-            "Access-Control-Allow-Credentials" : true,
-            "Access-Control-Allow-Origin" : "*",
-            "X-Requested-With" : "*"
-        }
-         */
         body: JSON.stringify({
           name: name,
           subject: subject,

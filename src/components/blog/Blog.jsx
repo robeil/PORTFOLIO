@@ -24,6 +24,7 @@ const Blog = () => {
   const handleModle = (id) => {
     handleBlogsData(id);
   };
+  
   return (
     <>
       <div className="row">
