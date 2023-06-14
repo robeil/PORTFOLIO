@@ -6,7 +6,7 @@ const personalInfoContent = [
   { meta: "Address", metaInfo: "Seattle, WA" },
   { meta: "phone", metaInfo: "206-602-5164" },
   { meta: "Email", metaInfo: "robeilfeb27@gmail.com" },
-  { meta: "language", metaInfo: "English, Tigrinya, basic German" },
+  { meta: "language", metaInfo: "English, Tigrinya, German" },
 ];
 
 const PersonalInfo = () => {

@@ -56,7 +56,7 @@ function Contact() {
           setSubject("");
           setEmail("");
           setMessage("");
-          console.log("message sent --------")
+          console.log("message sent --------" )
         })
     } catch (err) {
       failedResult();

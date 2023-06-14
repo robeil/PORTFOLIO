@@ -3,7 +3,7 @@ import React from "react";
 const experienceContent = [
   {
     year: "2020 - 2022",
-    position: "Java Developer",
+    position: "Java Backend Developer",
     companyName: "Enterprise Fleet Management",
     location: "St. Louis, MO, USA",
     details: `The Enterprise Fleet Management Early Access Program is an opportunity for customers 
@@ -28,7 +28,7 @@ const experienceContent = [
   },
   {
     year: "2017 - 2020",
-    position: "Java Developer",
+    position: "Full-stack Java Developer",
     companyName: "LWAM TECH SOLUTIONS LLC",
     location: "Alexandria VA, USA",
     details: `The Eri-root company began as a social platform, designed to bring together members of the Eritrean community. 
