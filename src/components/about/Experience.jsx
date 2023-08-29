@@ -2,6 +2,30 @@ import React from "react";
 
 const experienceContent = [
   {
+    year: "Jan 2023 - Jul  2023",
+    position: "Java Developer",
+    companyName: "Kabbee Organization",
+    location: "San Jose, CA, USA",
+    details: `The platform is a unique opportunity for teachers to offer their services while students learn, all while 
+    contributing to a good cause. Income earned from the platform will be donated to Eritrean immigrants worldwide. 
+    It's a win-win situation, as students get to learn and improve their skills while helping a good cause.`,
+    responsibilities: [
+      `Participate and contribute to architectural meetings.`,
+      `Developed and deployed Spring batch processing application to handle large number of records.`,
+      `Extensive experience in writing test cases using JUnit 5 and Mockito.`,
+      `Developed scripts to handle user data conversion.`,
+      `Developed application using spring Boot using Spring web, Spring Data, Spring Security.`,
+      `Worked in developing and deploying RESTful microservices on the AWS Cloud using Spring Boot and
+      Spring Cloud, utilizing various components.`,
+      `Update and manage config server to centrally control app configs for each application in pre-prod and prod.`,
+      `Maintained software and documented programming tasks and procedures. `,
+      `Implemented mapping of associations between entity classes and the relationship between logic.`,
+      `Utilize dependency injection and constructor injection when creating components.`,
+      `Wrote clean, efficient, and maintainable code that follows industry best practice and coding standard..`
+    ],
+    technologies: `Java, Spring, Spring Boot, REST, SQL, JUnit, Mockito, IntelliJ, Maven, Microservices, HTML, REACT, CSS, JavaScript, GIT`
+  },
+  {
     year: "2020 - 2022",
     position: "Java Backend Developer",
     companyName: "Enterprise Fleet Management",
@@ -98,6 +122,11 @@ const Experience = () => {
           <h5 className="poppins-font ">
             <span className="place open-sans-font">{val.details}</span>
           </h5>
+          <h5 className="poppins-font">
+            <span className="place open-sans-font">Technology Used : </span>
+          </h5>
+        
+          <p className="open-sans-font">{val.technologies}</p>
           {/* <h5 className="place open-sans-font">RESPONSIBILITIES
             {val.responsibilities.map((res, u) => (
                 <li key={u}>{res}</li>
