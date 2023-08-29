@@ -11,7 +11,7 @@ const heroContent = {
   heroMobileImage: heroImgMobile,
   heroTitleName: "Robeil Aregawi",
   heroDesignation: "Software Engineer",
-  heroDescriptions: `Talented Java Software Engineer with 5 years of Hands-on Java and React experience,
+  heroDescriptions: `Talented Java Software Engineer with 6+ years of Hands-on Java and React experience,
   including latest experience in designing and improving microservices applications. Proven experience 
   in optimizing code readability and improving team performance by implementing best practices and ensuring
   industry standards. Experienced in all stages of the software development lifecycle, with a valuable role 
@@ -19,8 +19,8 @@ const heroContent = {
   Expertise in the development of back-end components and frontend react component, as well as databases, 
   algorithms, interfaces, APIs, and tools. Technological knowledge includes Java spring, spring boot and 
   MS SQL, MySQL, MongoDB, React, Responsive UI as well as a variety of design patterns. Completing my 
-  master’s degree education in Computer Science and awaiting my graduation ceremony this December 2023. 
-  Holder of AWS Cloud Computing Certification. Skilled in using technologies such as Java, React, GitHub, AWS, Spring, Hibernate, 
+  master’s degree education in Computer Science and awaiting my graduation ceremony this October 2023. 
+  Holder of AWS Cloud Computing Certification. Skilled in using technologies such as Java, React, GitHub, AWS, Spring, SpringBoot, Hibernate, 
   Microservices using Agile Scrum through complete software development life cycle.`,
   heroBtn: "more about me",
 };
