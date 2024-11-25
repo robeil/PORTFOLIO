@@ -2,10 +2,16 @@ import React from "react";
 
 const experienceContent = [
   {
-    year: "Jan 2023 - Jul  2023",
+    year: "Sep 2024 - Present",
+    position: "Full Stack Java/React Developer",
+    companyName: "Luckyrabbit Tech",
+    location: "Seattle, WA, USA"
+  },
+  {
+    year: "Jun 2023 - Aug  2024",
     position: "Java Developer",
-    companyName: "Kabbee Organization",
-    location: "San Jose, CA, USA",
+    companyName: "Blankfactor LLC",
+    location: "Seattle, WA, USA",
     details: `The platform is a unique opportunity for teachers to offer their services while students learn, all while 
     contributing to a good cause. Income earned from the platform will be donated to Eritrean immigrants worldwide. 
     It's a win-win situation, as students get to learn and improve their skills while helping a good cause.`,
@@ -28,8 +34,8 @@ const experienceContent = [
   {
     year: "2020 - 2022",
     position: "Java Backend Developer",
-    companyName: "Enterprise Fleet Management",
-    location: "St. Louis, MO, USA",
+    companyName: "Delloite",
+    location: "Seattle, WA, USA",
     details: `The Enterprise Fleet Management Early Access Program is an opportunity for customers 
     to explore new features and provide feedback before anyone else. 
     Software features are sent directly to the customer via software updates, 
@@ -53,8 +59,8 @@ const experienceContent = [
   {
     year: "2017 - 2020",
     position: "Full-stack Java Developer",
-    companyName: "LWAM TECH SOLUTIONS LLC",
-    location: "Alexandria VA, USA",
+    companyName: "Epsilon",
+    location: "Seattle WA, USA",
     details: `The Eri-root company began as a social platform, designed to bring together members of the Eritrean community. 
     Over time, the site evolved to include a dating platform, which allowed members to connect and build relationships based 
     on shared values and interests. In addition to the dating app, the site also launched an educational platform that offers 
