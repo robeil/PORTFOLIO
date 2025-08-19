@@ -124,14 +124,7 @@ const Experience = () => {
           </h5>
           <h5 className="poppins-font text-uppercase">
             <span className="place open-sans-font">{val.location}</span>
-          </h5>
-          <h5 className="poppins-font ">
-            <span className="place open-sans-font">{val.details}</span>
-          </h5>
-          <h5 className="poppins-font">
-            <span className="place open-sans-font">Technology Used : </span>
-          </h5>
-        
+          </h5>   
           <p className="open-sans-font">{val.technologies}</p>
           {/* <h5 className="place open-sans-font">RESPONSIBILITIES
             {val.responsibilities.map((res, u) => (
