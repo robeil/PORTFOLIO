@@ -3,11 +3,14 @@
   "version": "2.2.1",
   "private": true,
   "dependencies": {
+    "@apideck/better-ajv-errors": "^0.3.6",
     "@aws-amplify/ui-react": "^4.3.6",
     "@emailjs/browser": "^3.6.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
     "aos": "^2.3.4",
     "aws-amplify": "^5.0.12",
     "axios": "^1.6.2",
@@ -55,7 +58,7 @@
     ]
   },
   "devDependencies": {
-    "ajv": "^7.2.4",
+    "ajv": "^8.17.1",
     "sass": "^1.52.2"
   },
   "engines": {
